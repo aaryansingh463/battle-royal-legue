@@ -1,1 +1,357 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battle Royal League</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#080b12;
+  color:white;
+}
+
+header{
+  background:#111827;
+  padding:18px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom:1px solid #263044;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:bold;
+  color:#00e5ff;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:18px;
+  font-size:14px;
+}
+
+.hero{
+  text-align:center;
+  padding:70px 20px;
+  background:linear-gradient(135deg,#07131f,#111827,#170b25);
+}
+
+.hero h1{
+  font-size:42px;
+  color:#00e5ff;
+  margin-bottom:15px;
+}
+
+.hero p{
+  color:#cbd5e1;
+  font-size:17px;
+  margin-bottom:25px;
+}
+
+.btn{
+  display:inline-block;
+  background:#00e5ff;
+  color:#001018;
+  padding:13px 24px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+section{
+  padding:45px 6%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:30px;
+  font-size:28px;
+  color:#00e5ff;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:#111827;
+  border:1px solid #263044;
+  border-radius:14px;
+  padding:22px;
+  box-shadow:0 5px 20px #0006;
+}
+
+.card h3{
+  color:#fff;
+  margin-bottom:15px;
+}
+
+.card p{
+  color:#cbd5e1;
+  margin:9px 0;
+}
+
+.price{
+  color:#22c55e !important;
+  font-weight:bold;
+}
+
+form{
+  max-width:600px;
+  margin:auto;
+  background:#111827;
+  padding:25px;
+  border-radius:14px;
+  border:1px solid #263044;
+}
+
+input,select{
+  width:100%;
+  padding:13px;
+  margin:8px 0 15px;
+  background:#080b12;
+  border:1px solid #334155;
+  border-radius:7px;
+  color:white;
+}
+
+label{
+  color:#cbd5e1;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  background:#00e5ff;
+  border:0;
+  border-radius:7px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.rules{
+  max-width:800px;
+  margin:auto;
+  line-height:1.8;
+  color:#cbd5e1;
+}
+
+.contact{
+  text-align:center;
+}
+
+.whatsapp{
+  display:inline-block;
+  background:#22c55e;
+  color:white;
+  padding:13px 25px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  background:#05070b;
+  color:#64748b;
+  font-size:13px;
+}
+
+@media(max-width:700px){
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  section{
+    padding:35px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">⚡ BATTLE ROYAL LEAGUE</div>
+
+  <nav>
+    <a href="#tournaments">Tournaments</a>
+    <a href="#register">Register</a>
+    <a href="#rules">Rules</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>🔥 BATTLE ROYAL LEAGUE</h1>
+  <p>Compete • Survive • Dominate</p>
+  <a href="#tournaments" class="btn">VIEW TOURNAMENTS</a>
+</section>
+
+<section id="tournaments">
+  <h2 class="title">🏆 Upcoming Tournaments</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Squad Battle</h3>
+      <p>👥 Mode: Squad</p>
+      <p>📅 Date: Coming Soon</p>
+      <p>🎟️ Slots: 25 Teams</p>
+      <p class="price">💰 Entry: Demo</p>
+      <p>🏆 Prize Pool: Coming Soon</p>
+      <a href="#register" class="btn">REGISTER</a>
+    </div>
+
+    <div class="card">
+      <h3>Duo Battle</h3>
+      <p>👥 Mode: Duo</p>
+      <p>📅 Date: Coming Soon</p>
+      <p>🎟️ Slots: 50 Teams</p>
+      <p class="price">💰 Entry: Demo</p>
+      <p>🏆 Prize Pool: Coming Soon</p>
+      <a href="#register" class="btn">REGISTER</a>
+    </div>
+
+    <div class="card">
+      <h3>Solo Battle</h3>
+      <p>👤 Mode: Solo</p>
+      <p>📅 Date: Coming Soon</p>
+      <p>🎟️ Slots: 100 Players</p>
+      <p class="price">💰 Entry: Demo</p>
+      <p>🏆 Prize Pool: Coming Soon</p>
+      <a href="#register" class="btn">REGISTER</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="register">
+  <h2 class="title">📝 Tournament Registration</h2>
+
+  <form onsubmit="registerPlayer(event)">
+
+    <label>Player Name</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
+
+    <label>BGMI ID</label>
+    <input type="text" id="bgmi" placeholder="Enter BGMI ID" required>
+
+    <label>Mobile Number</label>
+    <input type="tel" id="mobile" placeholder="Enter mobile number" required>
+
+    <label>Select Tournament</label>
+    <select id="tournament">
+      <option>Squad Battle</option>
+      <option>Duo Battle</option>
+      <option>Solo Battle</option>
+    </select>
+
+    <button type="submit">SUBMIT REGISTRATION</button>
+
+  </form>
+</section>
+
+<section id="rules">
+  <h2 class="title">📜 Tournament Rules</h2>
+
+  <div class="rules">
+    <p>1. सभी players को अपने सही BGMI ID से registration करना होगा.</p>
+    <p>2. एक player केवल allowed number of slots में ही participate कर सकता है.</p>
+    <p>3. Hack, cheat या unfair practice मिलने पर player/team को remove किया जा सकता है.</p>
+    <p>4. Room ID और Password tournament से पहले registered players को दिया जाएगा.</p>
+    <p>5. Tournament के सभी rules follow करना जरूरी है.</p>
+    <p>6. Tournament शुरू होने से पहले rules में बदलाव किया जा सकता है.</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="title">🏆 Latest Results</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🥇 1st Place</h3>
+      <p>Coming Soon</p>
+    </div>
+
+    <div class="card">
+      <h3>🥈 2nd Place</h3>
+      <p>Coming Soon</p>
+    </div>
+
+    <div class="card">
+      <h3>🥉 3rd Place</h3>
+      <p>Coming Soon</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="title">📞 Contact Us</h2>
+
+  <div class="contact">
+    <p>Registration या tournament information के लिए WhatsApp पर contact करें.</p>
+
+    <a class="whatsapp"
+       href="https://wa.me/91XXXXXXXXXX"
+       target="_blank">
+       💬 WhatsApp Us
+    </a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Battle Royal League | Community Tournament
+  <br><br>
+  Not affiliated with KRAFTON or BGMI.
+</footer>
+
+<script>
+function registerPlayer(event){
+
+  event.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let bgmi = document.getElementById("bgmi").value;
+  let tournament = document.getElementById("tournament").value;
+
+  alert(
+    "Registration Submitted!\\n\\n" +
+    "Player: " + name +
+    "\\nBGMI ID: " + bgmi +
+    "\\nTournament: " + tournament +
+    "\\n\\nThank you for registering!"
+  );
+
+}
+</script>
+
+</body>
+        </html>
