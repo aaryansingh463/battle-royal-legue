@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Battle Royal League</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#0b0f14;color:#fff}
+header{background:#101720;border-bottom:1px solid #27313d;position:sticky;top:0;z-index:5}
+.nav{max-width:1100px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:900;font-size:20px;color:#ffb000}.nav a{color:#ddd;text-decoration:none;margin-left:18px;font-size:14px}
+.hero{max-width:1100px;margin:auto;padding:65px 20px 45px;background:radial-gradient(circle at 80% 30%,#334a1d55,transparent 40%)}
+.badge{display:inline-block;background:#1c2b19;color:#b9ed58;padding:7px 12px;border-radius:20px;font-size:12px}
+h1{font-size:48px;margin:16px 0 10px}.hero p{color:#aeb8c4;max-width:620px;line-height:1.6}
+.btn{display:inline-block;background:#ffb000;color:#111;font-weight:800;padding:13px 18px;border-radius:8px;text-decoration:none;border:0;cursor:pointer}
+section{max-width:1100px;margin:auto;padding:35px 20px}.title{font-size:28px;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#131b24;border:1px solid #293541;border-radius:14px;padding:20px}
+.card h3{margin-top:0}.tag{color:#ffb000;font-size:12px;font-weight:bold}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0;color:#b9c2cc;font-size:13px}
+.info b{display:block;color:#fff;margin-top:4px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.step{background:#111821;padding:20px;border-radius:12px}.step strong{color:#ffb000}
+form{max-width:650px;background:#131b24;padding:22px;border-radius:14px;border:1px solid #293541}
+input,select{width:100%;padding:13px;margin:7px 0 14px;background:#0b0f14;border:1px solid #35414d;border-radius:8px;color:#fff}
+footer{text-align:center;padding:30px;color:#77818d;border-top:1px solid #202a34;margin-top:25px}
+@media(max-width:750px){h1{font-size:36px}.grid,.steps{grid-template-columns:1fr}.nav a{margin-left:8px;font-size:12px}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">⚡ BATTLE ROYAL LEAGUE</div>
+<nav><a href="#home">Home</a><a href="#tournaments">Tournaments</a><a href="#register">Register</a><a href="#results">Results</a></nav></div></header>
+
+<main id="home">
+<div class="hero"><span class="badge">BGMI ESPORTS TOURNAMENTS</span>
+<h1>PLAY • COMPETE • WIN</h1>
+<p>Register for online BGMI tournaments, compete with your squad and check tournament results from one place.</p>
+<a class="btn" href="#tournaments">View Tournaments</a></div>
+
+<section id="tournaments"><div class="title">🔥 Upcoming Tournaments</div>
+<div class="grid">
+<div class="card"><span class="tag">SQUAD</span><h3>Battle Royal Cup #01</h3><div class="info"><div>Entry Fee<b>₹50 / Team</b></div><div>Prize Pool<b>₹2,000</b></div><div>Date<b>20 Oct 2026</b></div><div>Slots<b>25 Teams</b></div></div><a class="btn" href="#register">REGISTER NOW</a></div>
+<div class="card"><span class="tag">DUO</span><h3>Battle Duo Clash</h3><div class="info"><div>Entry Fee<b>₹30 / Team</b></div><div>Prize Pool<b>₹1,000</b></div><div>Date<b>22 Oct 2026</b></div><div>Slots<b>25 Teams</b></div></div><a class="btn" href="#register">REGISTER NOW</a></div>
+<div class="card"><span class="tag">SOLO</span><h3>Solo Warrior</h3><div class="info"><div>Entry Fee<b>₹20 / Player</b></div><div>Prize Pool<b>₹500</b></div><div>Date<b>24 Oct 2026</b></div><div>Slots<b>50 Players</b></div></div><a class="btn" href="#register">REGISTER NOW</a></div>
+</div></section>
+
+<section><div class="title">⚡ How It Works</div><div class="steps">
+<div class="step"><strong>01</strong><h3>Choose Tournament</h3><p>Pick Solo, Duo or Squad tournament.</p></div>
+<div class="step"><strong>02</strong><h3>Register</h3><p>Submit your team and BGMI player details.</p></div>
+<div class="step"><strong>03</strong><h3>Play & Win</h3><p>Get match details and compete for the prize.</p></div>
+</div></section>
+
+<section id="register"><div class="title">📝 Tournament Registration</div>
+<form onsubmit="submitForm(event)"><label>Team / Player Name</label><input required placeholder="Enter name">
+<label>BGMI ID</label><input required placeholder="Enter BGMI ID">
+<label>Mode</label><select><option>Squad</option><option>Duo</option><option>Solo</option></select>
+<label>WhatsApp Number</label><input required type="tel" placeholder="10 digit number">
+<button class="btn" type="submit">SUBMIT REGISTRATION</button><p id="msg"></p></form></section>
+
+<section id="results"><div class="title">🏆 Latest Results</div>
+<div class="card"><h3>Battle Royal Cup — Sample Result</h3><p>🥇 Team Alpha &nbsp; | &nbsp; 🥈 Team Thunder &nbsp; | &nbsp; 🥉 Team X</p></div></section>
+</main>
+<footer>© 2026 Battle Royal League • Tournament registration demo</footer>
+<script>
+function submitForm(e){e.preventDefault();document.getElementById('msg').textContent="✅ Demo registration submitted! Admin approval/payment system can be connected later.";document.getElementById('msg').style.color="#b9ed58";}
+</script>
+</body></html>
